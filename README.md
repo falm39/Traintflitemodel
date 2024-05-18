@@ -40,7 +40,8 @@ fer2013/
         surprise/
 ```
 
-Kullanım
+**Kullanım**
+
 Veri Hazırlığı:
 Eğitim ve test veri dizinleri betikte ayarlanmalıdır:
 
@@ -48,13 +49,16 @@ Eğitim ve test veri dizinleri betikte ayarlanmalıdır:
 train_dir = '/path/to/fer2013/train'
 test_dir = '/path/to/fer2013/test'
 ```
+
 Model Eğitimi ve Dönüştürme:
+
 CNN modelini eğitmek ve TFLite formatına dönüştürmek için betiği çalıştırın:
 
 ```
 python3 train.py
 ```
-Kod Açıklaması
+**Kod Açıklaması**
+
 Veri Artırma ve Yükleme:
 
 ```
@@ -63,6 +67,7 @@ test_datagen = ImageDataGenerator(rescale=1./255)
 train_generator = train_datagen.flow_from_directory(train_dir, target_size=(48, 48), color_mode="grayscale", batch_size=64, class_mode='categorical')
 test_generator = test_datagen.flow_from_directory(test_dir, target_size=(48, 48), color_mode="grayscale", batch_size=64, class_mode='categorical')
 ```
+
 Model Tanımı:
 Conv2D ve MaxPooling2D katmanlarına sahip basit bir CNN modeli tanımlanır:
 
@@ -95,7 +100,8 @@ tflite_model = converter.convert()
 with open('model.tflite', 'wb') as f:
     f.write(tflite_model)
 ```
-Sonuçlar
+**Sonuçlar**
+
 Betik çalıştırıldıktan sonra, gerçek zamanlı duygu tanıma için uç cihazlarda kullanılabilecek bir model.tflite dosyanız olacak.
 
 Kaynaklar
