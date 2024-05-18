@@ -1,4 +1,4 @@
-CNN ve TensorFlow ile Duygu Tanıma
+**CNN ve TensorFlow ile Duygu Tanıma**
 Bu proje, FER-2013 veri setini kullanarak gri tonlamalı yüz resimlerinden duyguları tanımak için bir Konvolüsyonel Sinir Ağı (CNN) eğitir. Eğitilen model daha sonra uç cihazlarda kullanılmak üzere TensorFlow Lite (TFLite) formatına dönüştürülür.
 
 Gereksinimler
