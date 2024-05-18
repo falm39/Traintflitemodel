@@ -2,18 +2,22 @@
 
 Bu proje, FER-2013 veri setini kullanarak gri tonlamalı yüz resimlerinden duyguları tanımak için bir Konvolüsyonel Sinir Ağı (CNN) eğitir. Eğitilen model daha sonra uç cihazlarda kullanılmak üzere TensorFlow Lite (TFLite) formatına dönüştürülür.
 
-Gereksinimler
+**Gereksinimler**
+
 Python 3.x
 TensorFlow 2.x
 Keras
 Pillow (resim işleme için)
-Kurulum
+
+**Kurulum**
+
 Gerekli paketleri yüklemek için:
 
 ```
 pip install tensorflow keras pillow
 ```
-Veri Seti
+**Veri Seti**
+
 FER-2013 veri seti, yüz ifadelerini yedi duyguya göre kategorize eder: öfke, iğrenme, korku, mutluluk, üzüntü, şaşkınlık ve nötr. Veri setinin aşağıdaki gibi düzenlendiğinden emin olun:
 
 ```
